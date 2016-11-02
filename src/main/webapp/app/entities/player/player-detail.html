@@ -1,18 +1,16 @@
 
 <div>
-    <h2><span data-translate="futBalApp.team.detail.title">Team</span> {{vm.team.id}}</h2>
+    <h2><span data-translate="futBalApp.player.detail.title">Player</span> {{vm.player.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-        <dt><span data-translate="futBalApp.team.name">Name</span></dt>
+        <dt><span data-translate="futBalApp.player.number">Number</span></dt>
         <dd>
-            <span>{{vm.team.name}}</span>
+            <span>{{vm.player.number}}</span>
         </dd>
-        <dt><span data-translate="futBalApp.team.players">Players</span></dt>
+        <dt><span data-translate="futBalApp.player.user">User</span></dt>
         <dd>
-            <span ng-repeat="players in vm.team.players">
-                <a ui-sref="player-detail({id: players.id})">{{players.number}}</a>{{$last ? '' : ', '}}
-            </span>
+            {{vm.player.userId}}
         </dd>
     </dl>
 
@@ -22,7 +20,7 @@
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
     </button>
 
-    <button type="button" ui-sref="team-detail.edit({id:vm.team.id})" class="btn btn-primary">
+    <button type="button" ui-sref="player-detail.edit({id:vm.player.id})" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span>
         <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
     </button>

@@ -17,7 +17,7 @@
                                  baseTableName="team_players"
                                  constraintName="fk_team_players_players_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="jhi_user"/>
+                                 referencedTableName="player"/>
         
     </changeSet>
 </databaseChangeLog>

@@ -1,13 +1,13 @@
 <div>
-    <h2 data-translate="futBalApp.team.home.title">Teams</h2>
+    <h2 data-translate="futBalApp.player.home.title">Players</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
-                <button class="btn btn-primary" ui-sref="team.new" >
+                <button class="btn btn-primary" ui-sref="player.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span  data-translate="futBalApp.team.home.createLabel">
-                        Create new Team
+                    <span  data-translate="futBalApp.player.home.createLabel">
+                        Create new Player
                     </span>
                 </button>
             </div>
@@ -19,36 +19,34 @@
             <thead>
                 <tr>
                     <th><span data-translate="global.field.id">ID</span></th>
-                    <th><span data-translate="futBalApp.team.name">Name</span></th>
-                    <th><span data-translate="futBalApp.team.players">Players</span></th>
+                    <th><span data-translate="futBalApp.player.number">Number</span></th>
+                    <th><span data-translate="futBalApp.player.user">User</span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="team in vm.teams track by team.id">
-                    <td><a ui-sref="team-detail({id:team.id})">{{team.id}}</a></td>
-                    <td>{{team.name}}</td>
+                <tr ng-repeat="player in vm.players track by player.id">
+                    <td><a ui-sref="player-detail({id:player.id})">{{player.id}}</a></td>
+                    <td>{{player.number}}</td>
                     <td>
-                        <span ng-repeat="players in team.players">
-                            <a class="form-control-static" ui-sref="player-detail({id: players.id})">{{players.number}}</a>{{$last ? '' : ', '}}
-                        </span>
+                        {{player.userId}}
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
-                                    ui-sref="team-detail({id:team.id})"
+                                    ui-sref="player-detail({id:player.id})"
                                     class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="team.edit({id:team.id})"
+                                    ui-sref="player.edit({id:player.id})"
                                     class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="team.delete({id:team.id})"
+                                    ui-sref="player.delete({id:player.id})"
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>

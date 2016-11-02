@@ -31,7 +31,7 @@ public class Team implements Serializable {
     @JoinTable(name = "team_players",
                joinColumns = @JoinColumn(name="teams_id", referencedColumnName="ID"),
                inverseJoinColumns = @JoinColumn(name="players_id", referencedColumnName="ID"))
-    private Set<User> players = new HashSet<>();
+    private Set<Player> players = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -54,27 +54,29 @@ public class Team implements Serializable {
         this.name = name;
     }
 
-    public Set<User> getPlayers() {
+    public Set<Player> getPlayers() {
         return players;
     }
 
-    public Team players(Set<User> users) {
-        this.players = users;
+    public Team players(Set<Player> players) {
+        this.players = players;
         return this;
     }
 
-    public Team addPlayers(User user) {
-        players.add(user);
+    public Team addPlayers(Player player) {
+        players.add(player);
+        player.getTeams().add(this);
         return this;
     }
 
-    public Team removePlayers(User user) {
-        players.remove(user);
+    public Team removePlayers(Player player) {
+        players.remove(player);
+        player.getTeams().remove(this);
         return this;
     }
 
-    public void setPlayers(Set<User> users) {
-        this.players = users;
+    public void setPlayers(Set<Player> players) {
+        this.players = players;
     }
 
     @Override

@@ -5,9 +5,9 @@
         .module('futBalApp')
         .controller('TeamDetailController', TeamDetailController);
 
-    TeamDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Team', 'User'];
+    TeamDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Team', 'Player'];
 
-    function TeamDetailController($scope, $rootScope, $stateParams, previousState, entity, Team, User) {
+    function TeamDetailController($scope, $rootScope, $stateParams, previousState, entity, Team, Player) {
         var vm = this;
 
         vm.team = entity;

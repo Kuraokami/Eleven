@@ -2,9 +2,9 @@
 
 describe('Controller Tests', function() {
 
-    describe('Team Management Detail Controller', function() {
+    describe('Player Management Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockPreviousState, MockTeam, MockPlayer;
+        var MockEntity, MockPreviousState, MockPlayer, MockUser, MockTeam;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -12,8 +12,9 @@ describe('Controller Tests', function() {
             $scope = $rootScope.$new();
             MockEntity = jasmine.createSpy('MockEntity');
             MockPreviousState = jasmine.createSpy('MockPreviousState');
-            MockTeam = jasmine.createSpy('MockTeam');
             MockPlayer = jasmine.createSpy('MockPlayer');
+            MockUser = jasmine.createSpy('MockUser');
+            MockTeam = jasmine.createSpy('MockTeam');
             
 
             var locals = {
@@ -21,18 +22,19 @@ describe('Controller Tests', function() {
                 '$rootScope': $rootScope,
                 'entity': MockEntity,
                 'previousState': MockPreviousState,
-                'Team': MockTeam,
-                'Player': MockPlayer
+                'Player': MockPlayer,
+                'User': MockUser,
+                'Team': MockTeam
             };
             createController = function() {
-                $injector.get('$controller')("TeamDetailController", locals);
+                $injector.get('$controller')("PlayerDetailController", locals);
             };
         }));
 
 
         describe('Root Scope Listening', function() {
             it('Unregisters root scope listener upon scope destruction', function() {
-                var eventType = 'futBalApp:teamUpdate';
+                var eventType = 'futBalApp:playerUpdate';
 
                 createController();
                 expect($rootScope.$$listenerCount[eventType]).toEqual(1);

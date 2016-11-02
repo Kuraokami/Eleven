@@ -3,9 +3,11 @@
     "relationships": [
         {
             "relationshipName": "players",
-            "otherEntityName": "user",
+            "otherEntityName": "player",
             "relationshipType": "many-to-many",
-            "ownerSide": true
+            "otherEntityField": "number",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "teams"
         }
     ],
     "fields": [

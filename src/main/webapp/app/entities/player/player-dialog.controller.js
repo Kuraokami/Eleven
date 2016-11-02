@@ -3,17 +3,18 @@
 
     angular
         .module('futBalApp')
-        .controller('TeamDialogController', TeamDialogController);
+        .controller('PlayerDialogController', PlayerDialogController);
 
-    TeamDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Team', 'Player'];
+    PlayerDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Player', 'User', 'Team'];
 
-    function TeamDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Team, Player) {
+    function PlayerDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Player, User, Team) {
         var vm = this;
 
-        vm.team = entity;
+        vm.player = entity;
         vm.clear = clear;
         vm.save = save;
-        vm.players = Player.query();
+        vm.users = User.query();
+        vm.teams = Team.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
@@ -25,15 +26,15 @@
 
         function save () {
             vm.isSaving = true;
-            if (vm.team.id !== null) {
-                Team.update(vm.team, onSaveSuccess, onSaveError);
+            if (vm.player.id !== null) {
+                Player.update(vm.player, onSaveSuccess, onSaveError);
             } else {
-                Team.save(vm.team, onSaveSuccess, onSaveError);
+                Player.save(vm.player, onSaveSuccess, onSaveError);
             }
         }
 
         function onSaveSuccess (result) {
-            $scope.$emit('futBalApp:teamUpdate', result);
+            $scope.$emit('futBalApp:playerUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         }
