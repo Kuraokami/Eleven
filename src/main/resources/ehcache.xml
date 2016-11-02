@@ -37,5 +37,13 @@
            timeToLiveSeconds="3600">
     </cache>
     
+    <cache name="com.nethard.eleven.domain.Team"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.nethard.eleven.domain.Team.players"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>
