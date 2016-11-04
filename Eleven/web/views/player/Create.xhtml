@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PlayerCreateDlg" widgetVar="PlayerCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreatePlayerTitle}">
+            <h:form id="PlayerCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{playerController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreatePlayerLabel_number}" for="number" />
+                        <p:inputText id="number" value="#{playerController.selected.number}" title="#{bundle.CreatePlayerTitle_number}" />
+                        <p:outputLabel value="#{bundle.CreatePlayerLabel_name}" for="name" />
+                        <p:inputText id="name" value="#{playerController.selected.name}" title="#{bundle.CreatePlayerTitle_name}" />
+                        <p:outputLabel value="#{bundle.CreatePlayerLabel_pass}" for="pass" />
+                        <p:inputText id="pass" value="#{playerController.selected.pass}" title="#{bundle.CreatePlayerTitle_pass}" />
+                        <p:outputLabel value="#{bundle.CreatePlayerLabel_id}" for="id" />
+                        <p:inputText id="id" value="#{playerController.selected.id}" title="#{bundle.CreatePlayerTitle_id}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{playerController.create}" value="#{bundle.Save}" update="display,:PlayerListForm:datalist,:growl" oncomplete="handleSubmit(args,'PlayerCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PlayerCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

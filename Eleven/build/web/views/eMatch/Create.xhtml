@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="EMatchCreateDlg" widgetVar="EMatchCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateEMatchTitle}">
+            <h:form id="EMatchCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{eMatchController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateEMatchLabel_pointsTeam1}" for="pointsTeam1" />
+                        <p:inputText id="pointsTeam1" value="#{eMatchController.selected.pointsTeam1}" title="#{bundle.CreateEMatchTitle_pointsTeam1}" />
+                        <p:outputLabel value="#{bundle.CreateEMatchLabel_pointsTeam2}" for="pointsTeam2" />
+                        <p:inputText id="pointsTeam2" value="#{eMatchController.selected.pointsTeam2}" title="#{bundle.CreateEMatchTitle_pointsTeam2}" />
+                        <p:outputLabel value="#{bundle.CreateEMatchLabel_winnerTeam}" for="winnerTeam" />
+                        <p:inputText id="winnerTeam" value="#{eMatchController.selected.winnerTeam}" title="#{bundle.CreateEMatchTitle_winnerTeam}" />
+                        <p:outputLabel value="#{bundle.CreateEMatchLabel_team1}" for="team1" />
+                        <p:inputText id="team1" value="#{eMatchController.selected.team1}" title="#{bundle.CreateEMatchTitle_team1}" />
+                        <p:outputLabel value="#{bundle.CreateEMatchLabel_team2}" for="team2" />
+                        <p:inputText id="team2" value="#{eMatchController.selected.team2}" title="#{bundle.CreateEMatchTitle_team2}" />
+                        <p:outputLabel value="#{bundle.CreateEMatchLabel_id}" for="id" />
+                        <p:inputText id="id" value="#{eMatchController.selected.id}" title="#{bundle.CreateEMatchTitle_id}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{eMatchController.create}" value="#{bundle.Save}" update="display,:EMatchListForm:datalist,:growl" oncomplete="handleSubmit(args,'EMatchCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="EMatchCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
