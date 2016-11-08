@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "players",
+            "otherEntityName": "player",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "number",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "teams"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20161102035442",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "team",
+    "pagination": "no"
+}
