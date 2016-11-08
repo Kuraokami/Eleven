@@ -3,7 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/repo/Eleven/web/views/eMatch/List.xhtml</file>
+            <file>file:/C:/repo/eleven/Eleven/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/C:/repo/eleven/Eleven/src/conf/persistence.xml</file>
+            <file>file:/C:/repo/eleven/Eleven/web/views/eMatch/Create.xhtml</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/controller/TeamFacade.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/views/EMatchController.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/controller/AbstractFacade.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/model/EMatch.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/controller/EMatchFacade.java</file>
+            <file>file:/C:/repo/eleven/Eleven/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/bd/Conexion.java</file>
+            <file>file:/C:/repo/eleven/Eleven/web/WEB-INF/web.xml</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/model/Team.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/controller/PlayerFacade.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/views/TeamController.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/model/Player.java</file>
+            <file>file:/C:/repo/eleven/Eleven/src/java/com/eleven/views/PlayerController.java</file>
         </group>
     </open-files>
 </project-private>
