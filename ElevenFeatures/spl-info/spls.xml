@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../bin/spls.xsd">
+	<spl name="Eleven">
+		<features>
+			<feature name ="Player" />
+			<feature name ="Team" />
+			<feature name ="EMatch" />
+			<feature name ="dAbstractFacade" />
+			<feature name ="EMatchFacade" />
+			<feature name ="PlayerFacade" />
+			<feature name ="TeamFacade" />
+			<feature name ="EMatchController" />
+			<feature name ="PlayerController" />
+			<feature name ="TeamController" />
+		</features>
+		<configurations>
+		</configurations>
+		<deltas>
+			<partition>
+				<modul delta="dPLayer" when="Player
+				" />
+			</partition>
+			<partition>
+				<modul delta="dTeam" when="Team
+				" />
+			</partition>
+			<partition>
+				<modul delta="dEMatch" when="EMatch
+				" />
+			</partition>
+			<partition>
+				<modul delta="dEMatchFacade" when="EMatchFacade
+				" />
+			</partition>
+			<partition>
+				<modul delta="dPlayerFacade" when="PlayerFacade
+				" />
+			</partition>
+			<partition>
+				<modul delta="dTeamFacade" when="TeamFacade
+				" />
+			</partition>
+			<partition>
+				<modul delta="dEMatchController" when="EMatchController
+				" />
+			</partition>
+			<partition>
+				<modul delta="dPlayerController" when="PlayerController
+				" />
+			</partition>
+			<partition>
+				<modul delta="dTeamController" when="TeamController
+				" />
+			</partition>
+			<partition>
+				<modul delta="dAdd" when="dAbstractFacade
+				" />
+				<modul delta="dModify" when="dAbstractFacade
+				" />
+				<modul delta="dDelete" when="dAbstractFacade
+				" />
+				<modul delta="dFind" when="dAbstractFacade
+				" />
+				<modul delta="dGeneral" when="dAbstractFacade
+				" />
+			</partition>
+		</deltas>
+	</spl>
+</spls>

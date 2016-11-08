@@ -1,0 +1,41 @@
+SPL Eleven {
+
+	Features = {Player, Team, EMatch, 
+		dAbstractFacade, EMatchFacade, PlayerFacade, TeamFacade, 
+		EMatchController, PlayerController, TeamController
+	}
+
+	Deltas = {dPLayer, dTeam, dEMatch, 
+		dAdd, dModify, dDelete, dFind, dGeneral,
+		dEMatchFacade, dPlayerFacade, dTeamFacade,
+		dEMatchController, dPlayerController, dTeamController
+	}
+
+	Constraints {
+		// Put boolean expression representation of the feature model here. 
+	}
+
+	Partitions {
+		{dPLayer} when (Player);
+		{dTeam} when (Team);
+		{dEMatch} when (EMatch);
+		
+		{dEMatchFacade} when (EMatchFacade);
+		{dPlayerFacade} when (PlayerFacade);
+		{dTeamFacade} when (TeamFacade);
+		
+		{dEMatchController} when (EMatchController);
+		{dPlayerController} when (PlayerController);
+		{dTeamController} when (TeamController);
+		
+		{dAdd, dModify, dDelete, dFind, dGeneral} when (dAbstractFacade);
+	}
+ 
+	Products {
+	_ = {Player, Team, EMatch, 
+		dAbstractFacade, EMatchFacade, PlayerFacade, TeamFacade, 
+		EMatchController, PlayerController, TeamController
+	};
+		// Put product definitions here. 
+	}
+}

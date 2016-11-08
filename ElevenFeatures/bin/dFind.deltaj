@@ -1,0 +1,8 @@
+delta dFind {
+	modifies com.eleven.controller.AbstractFacade {
+		adds public T find(Object id) {
+			return getEntityManager().find(entityClass, id);
+		}
+
+	}
+}

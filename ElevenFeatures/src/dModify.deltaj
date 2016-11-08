@@ -1,0 +1,8 @@
+delta dModify {
+	modifies com.eleven.controller.AbstractFacade {
+		adds public void edit(T entity) {
+			getEntityManager().merge(entity);
+		}
+
+	}
+}

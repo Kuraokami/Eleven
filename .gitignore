@@ -16,6 +16,8 @@
 #Bower
 /src/main/webapp/bower_components/**
 
+/src-gen/**
+
 ######################
 # SASS
 ######################
