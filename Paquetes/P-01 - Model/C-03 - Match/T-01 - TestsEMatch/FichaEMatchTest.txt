@@ -1,0 +1,71 @@
+================================================================================
+1 INFORMACIÓN DE ACEPTACIÓN ====================================================
+================================================================================
+
+1.1 CRITERIOS DEL TEST
+Para la aceptación del componente C03, los casos de pruebas dentro de EMatchTest deben ejecutarse
+
+
+1.2 RESUMEN DEL TEST
+El Modelo EMatch fue probado en la fase de diseño y los casos de pruebas cubrieron todos escenarios que permiten verificar al objeto
+
+
+1.3 AMBIENTE DE EJECUCIÓN DEL TEST
+- Sistemas operativo: Windows 10 de 64 bits
+- RAM: 8,00 GB
+
+
+1.4 CASOS DE PRUEBA
+EMatchTest.java
+
+1.4.1 Caso de prueba - testLoserTeam
+- Descripción: El Modelo EMatch es instanciado y se verifica que tiene dos equipos, y que el equipo ganador es diferente al de la prueba
+- Entradas:  
+  - 1 EMatch, 
+  - 2 Equipos,
+  - Asignar los Equipos al EMatch
+  - Establecer al RealMadrid como ganador
+  - Validar que Barcelona no es el ganador del EMatch
+- Salidas esperadas:
+  - Test Valido.
+- Resultados Reales:
+  - Test Valido
+  
+- Anomalías: Ninguna
+- Fecha: 09.11.2016
+- Testers: Frederik Rodriguez
+
+1.4.2 Caso de prueba - testWinnerTeam
+- Descripción: El Modelo EMatch es instanciado y se verifica que tiene dos equipos, y que el equipo ganador es igual al de la prueba
+- Entradas:  
+  - 1 EMatch, 
+  - 2 Equipos,
+  - Asignar los Equipos al EMatch
+  - Establecer al RealMadrid como ganador
+  - Validar que RealMadrid es el ganador del EMatch
+- Salidas esperadas:
+  - Test Valido.
+- Resultados Reales:
+  - Test Valido
+  
+- Anomalías: Ninguna
+- Fecha: 09.11.2016
+- Testers: Frederik Rodriguez
+
+
+1.4.3 Caso de prueba - testGameAvailability
+- Descripción: El Modelo EMatch es instanciado y se verifica que tiene dos equipos, y que por defecto, el partido inicia disponible
+- Entradas:  
+  - 1 EMatch, 
+  - 2 Equipos,
+  - Asignar los Equipos al EMatch
+  - Establecer al RealMadrid como ganador
+  - Validar que el partido esta disponible por defecto.
+- Salidas esperadas:
+  - Test Valido.
+- Resultados Reales:
+  - Test Valido
+  
+- Anomalías: Ninguna
+- Fecha: 09.11.2016
+- Testers: Frederik Rodriguez
