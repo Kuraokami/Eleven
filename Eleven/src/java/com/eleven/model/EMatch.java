@@ -29,6 +29,10 @@ public class EMatch implements Serializable {
     
     private Team team2;
 
+    public EMatch() {
+        this.gameAvailable =  true;
+    }  
+    
     public int getPointsTeam1() {
         return pointsTeam1;
     }

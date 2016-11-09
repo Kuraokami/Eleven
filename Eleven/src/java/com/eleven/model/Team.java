@@ -28,6 +28,8 @@ public class Team implements Serializable {
     @OneToMany
     private List<Player> teamPlayers;
 
+    
+    
     public List<EMatch> geteMatchs() {
         return eMatchs;
     }
