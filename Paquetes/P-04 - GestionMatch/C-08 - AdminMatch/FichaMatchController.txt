@@ -3,15 +3,15 @@
 ================================================================================
 
 1.1 IDENTIFICACIÓN
--ID:C03
--NOMBRE:AbstractFacade.deltaJ
+-ID:C07
+-NOMBRE:EMatchController.deltaJ
 
 1.2 TIPO 
 -COMPONENTE INTERNO
 
 1.3 RESUMEN
-Este componente conecta Playeres a una base de datos, configurada a traves del componente <C-98>
-Este componente conoce como hacer CRUD de Instancias de <Player> en cualquier base de datos configurada
+Este componente maneja la capa Web de la administracion de EMatchs, enlaza la vista web, con los objetos Facade que 
+llevan la informacion a la base de datos.
 
 Este componente debe ser ensamblado en DeltaJ para producir un objeto .Java
 
@@ -30,15 +30,15 @@ Este componente debe ser ensamblado en DeltaJ para producir un objeto .Java
 
 2.1 FUNCIONES QUE PROVEE
 
-create(Player entity)
+create(Team entity)
 - Crea un nuevo objeto.
  - Params: Entity: El objeto a crear
     
-edit(Player entity) {
+edit(Team entity) {
 - Edita uno de los objetos
  - Params: Entity: El objeto a editar
     
-remove(Player entity) {
+remove(Team entity) {
 - Elimina un objeto de la base de datos
 - Params: Entity: El objeto a Remover    
 
@@ -49,7 +49,7 @@ find(Object id) {
 findAll() {
 - Lista todos los objetos
    
-List<Player> findRange(int[] range) {
+List<Team> findRange(int[] range) {
 - Lista los objetos en un rango
 - Params: range: Los Ids de los objetos a crear
    
@@ -57,11 +57,12 @@ int count() {
 - Cuenta todos los objetos que existen
     
 
+
 2.2 DEPENDENCIAS
-- C-03 - Player.java
+- C-03 - EMatchFacade.java
 - Este componente ensamblado depende de las APIs de JPA
 - Este componente debe ser ensamblado con Delta J.
-
+- Este componente ensamblado depende de las APIs de Enterprise JavaBeans, y JSF
 
 
 ================================================================================

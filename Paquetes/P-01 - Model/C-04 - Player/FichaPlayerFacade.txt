@@ -1,97 +1,70 @@
-Readme.txt
-
 ================================================================================
-1.1 INFORMACION BASICA =========================================================
+1 INFORMACION BASICA ===========================================================
 ================================================================================
 
+1.1 IDENTIFICACIÓN
+-ID:C04
+-NOMBRE:PlayerFacade.deltaJ
 
-	1.1.1 IDENTIFICACION
+1.2 TIPO 
+-COMPONENTE INTERNO
 
-	-ID:COMPONENTE01
-	-NOMBRE:AdminUsuariosWS
+1.3 RESUMEN
+Este componente conecta Players a una base de datos, configurada a traves del componente <C-98>
+Este componente conoce como hacer CRUD de Instancias de <Player> en cualquier base de datos configurada
 
-	1.1.2 TIPO 
+Este componente debe ser ensamblado en DeltaJ para producir un objeto .Java
 
-	-COMPONENTE INTERNO
+1.4 HISTORIA
+-VERSION: 1.0
+-FECHA: NOVIEMBRE 09 de 2016
 
-	1.1.3 RESUMEN
+1.5 AUTORES
+- Frederik Rodriguez
+- Jose Fernando Herrera 
 
-	Este componente proporciona un servicio de administracion de usuarios. 
-	este envia la informacion para agregar un usuario, modificarlo, 
-	eliminarlo y consultarlo. 
-
-	1.1.4 HISTORIA
-
-	-VERSION: 1.0
-	-FECHA: OCTUBRE 2016
-	-DESARROLLADOR: ESTUDIANTES EAFIT
-
-	1.1.5 AUTORES
-
-	-Felipe Bronz, f870421@gmail.com
-	-Jose Herrera, jfernandoherrera@gmail.com
-
-	 
 ================================================================================
-1.2 INTERFACES =================================================================
+2 INTERFACES ===================================================================
 ================================================================================
 
 
-	1.2.1 DEPENDENCIAS
+2.1 FUNCIONES QUE PROVEE
 
-	NOMBRE:Country
-	URL SERVICIO: http://www.webservicex.com/country.asmx?wsdl
-	RUTA: C:\Users\Stid\Documents\proyectomym\Componentes\Componente Externo\sampleCountrySoapProxy
-	DESCRIPCION: Este componente proporciona un servicio WEB referente a un País, entre
-	los servicios que ofrece podemos encontrar el de obtener el codigo del 
-	país, su moneda, gmt, entre otros. El servicio que se usa en nuestra 
-	aplicacion es obtener la moneda en base al nombre del país.
+create(Player entity)
+- Crea un nuevo objeto.
+ - Params: Entity: El objeto a crear
+    
+edit(Player entity) {
+- Edita uno de los objetos
+ - Params: Entity: El objeto a editar
+    
+remove(Player entity) {
+- Elimina un objeto de la base de datos
+- Params: Entity: El objeto a Remover    
 
-	NOMBRE:USUARIO
-	URL:C:\Users\Stid\Documents\proyectomym\Componentes\ModeloUsuario
-	DESCRIPCION:Este componente es el encargado de definir los atributos de un 
-	usuario, posee los setter y getter, permite que otros componentes los
-	accedan y los operen.
-	
-	NOMBRE:USUARIODAO
-	URL:C:\Users\Stid\Documents\proyectomym\Componentes\ModeloUsuario
-	DESCRIPCION:Es el encargado de suministrar la interfaz entre el modelo
-	y los servicios, es el encargado del almacenamiento en la base de datos.	
+find(Object id) {
+- Encuentra un objeto desde el almacenamiento de datos
+- Params: id: El id del objeto a encontrar
+    
+findAll() {
+- Lista todos los objetos
+   
+List<Player> findRange(int[] range) {
+- Lista los objetos en un rango
+- Params: range: Los Ids de los objetos a crear
+   
+int count() {
+- Cuenta todos los objetos que existen
+    
 
+2.2 DEPENDENCIAS
+- C-03 - Player.java
+- Este componente ensamblado depende de las APIs de JPA
+- Este componente debe ser ensamblado con Delta J.
 
-
-	1.2.2 FUNCIONES QUE PROVEE
-
-	NOMBRE:Agregar
-	DESCRIPCION: Es una interface provista que permite registrar los valores
-	para la creacion de un usuario.
-
-	NOMBRE:Modificar
-	DESCRIPCION: Esta a raiz de un Id permite enviar nuevos valores a un 
-	usuario existente, es decirlo modificarlo.
-
-	NOMBRE:Eliminar
-	DESCRIPCION: Esta funcion permite recibir un id de un usuario existente
-	y solicitar su eliminación de la base de datos.
-
-	NOMBRE:Listar
-	DESCRIPCION:Permite solicitar la informacion de los usuarios existentes.
-	
-
-================================================================================
-1.3 INFORMACION DETALLADA ======================================================
-================================================================================
-
-
-	NOMBRE:AdminUsuariosWS
-	RUTA:C:\Users\Stid\Documents\proyectomym\Componentes\AdminUsuarios
 
 
 ================================================================================
-1.4 TEST =======================================================================
+3 INFORMACIÓN DETALLADA ========================================================
 ================================================================================
-
-	Actualmente no ha sido probado.
-
-
-
+...
