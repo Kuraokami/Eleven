@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+
+
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListEMatchTitle}"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+          <h:form id="StatListForm">
+                <p:panel header="#{bundle.ListEMatchTitle}">
+
+                    <p:dataList value="#{statController.items}"
+                                var="item"
+                                type="definition">
+                        #{item.team.name} 
+                        
+                    </p:dataList>
+
+                    <p:dataTable id="datalist" value="#{statController.items}" var="item"
+                               
+                                 paginator="true"
+                                 rowKey="#{item.team.name}"
+                                 rows="10"
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+
+                     
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Victorias"/>
+                            </f:facet>
+                            <h:outputText value="#{item.wins}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Derrotas"/>
+                            </f:facet>
+                            <h:outputText value="#{item.loses}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Empates"/>
+                            </f:facet>
+                            <h:outputText value="#{item.draws}"/>
+                        </p:column>             
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Equipo"/>
+                            </f:facet>
+                            <h:outputText value="#{item.team.name}"/>
+                        </p:column>
+                   
+                    </p:dataTable>
+                </p:panel>
+            </h:form>
+         </ui:define>
+    </ui:composition>
+
+</html>
