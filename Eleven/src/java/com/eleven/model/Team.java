@@ -80,9 +80,9 @@ public class Team implements Serializable {
         Team other = (Team) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
         
-        return true;
+        return false;
         
-        }else return false;
+        }else return true;
         
     }
 
