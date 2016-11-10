@@ -4,13 +4,13 @@
 
 1.1 IDENTIFICACIÓN
 -ID:C09
--NOMBRE:Create.XHTML
+-NOMBRE:Edit.XHTML
 
 1.2 TIPO 
 -COMPONENTE INTERNO
 
 1.3 RESUMEN
-Este componente maneja la capa vista de la creación de EMatchs, proporciona la interfaz para la interacción con el usuario.
+Este componente maneja la capa vista para editar las matches, proporciona la interfaz para la interacción con el usuario.
 
 1.4 HISTORIA
 -VERSION: 1.0
@@ -41,11 +41,12 @@ http://xmlns.jcp.org/jsf/facelets
 http://xmlns.jcp.org/jsf/html
 http://xmlns.jcp.org/jsf/core
 http://primefaces.org/ui
-EMatchController
-EMatch
+StatController
+Stat
+
 ================================================================================
 3 INFORMACIÓN DETALLADA ========================================================
 ================================================================================
-Consta de un modal con un label indicando la funcion de crear new ematch y 6 campos etiquetados con el nombre del atributo que representan, si no se
-se especifica un id se pone automaticamente con numero incremental y si se usa uno ya existente se editaran los atributos del EMatch correspondiente 
-al id.(TEAMS NO SON OBLIGATORIOS)
+Consta de un modal con un label indicando la funcion de Editar ematch y 6 campos etiquetados con el nombre del atributo que representan, se
+especifica un id ya existente y se editaran los atributos del EMatch correspondiente 
+al id.

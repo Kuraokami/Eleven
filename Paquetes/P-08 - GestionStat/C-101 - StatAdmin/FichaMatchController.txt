@@ -1,0 +1,62 @@
+================================================================================
+1 INFORMACION BASICA ===========================================================
+================================================================================
+
+1.1 IDENTIFICACIÓN
+-ID:C07
+-NOMBRE:StatController.java
+
+1.2 TIPO 
+-COMPONENTE INTERNO
+
+1.3 RESUMEN
+Este componente maneja la capa Web de la administracion de Stats, enlaza la vista web, con los objetos Facade que 
+llevan la informacion a la base de datos.
+
+1.4 HISTORIA
+-VERSION: 1.0
+-FECHA: NOVIEMBRE 09 de 2016
+
+1.5 AUTORES
+- Frederik Rodriguez
+- Jose Fernando Herrera 
+
+================================================================================
+2 INTERFACES ===================================================================
+================================================================================
+
+
+2.1 FUNCIONES QUE PROVEE
+
+BuildStats() {
+- Construye la estructura que almacena las Stats de los equipos
+
+find(Object id) {
+- Encuentra un objeto desde el almacenamiento de datos
+- Params: id: El id del objeto a encontrar
+    
+findAll() {
+- Lista todos los objetos
+   
+List<Team> findRange(int[] range) {
+- Lista los objetos en un rango
+- Params: range: Los Ids de los objetos a crear
+   
+int count() {
+- Cuenta todos los objetos que existen
+    
+
+
+2.2 DEPENDENCIAS
+- C-03 - EMatchFacade.java
+- C-05 - TeamFacade.java
+- C-100 - Stat.java
+- Este componente depende de las APIs de JPA
+- 
+- depende de las APIs de Enterprise JavaBeans, y JSF
+
+
+================================================================================
+3 INFORMACIÓN DETALLADA ========================================================
+================================================================================
+...

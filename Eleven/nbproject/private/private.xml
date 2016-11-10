@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/repo/futBal/Eleven/src/conf/persistence.xml</file>
-            <file>file:/C:/repo/futBal/Eleven/test/com/eleven/model/EMatchTest.java</file>
-            <file>file:/C:/repo/futBal/Eleven/web/views/eMatch/List.xhtml</file>
-            <file>file:/C:/repo/futBal/Eleven/src/java/com/eleven/model/Team.java</file>
-            <file>file:/C:/repo/futBal/Eleven/test/com/eleven/model/TeamTest.java</file>
-            <file>file:/C:/repo/futBal/Eleven/web/WEB-INF/glassfish-resources.xml</file>
-            <file>file:/C:/repo/futBal/Eleven/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Users/kaotiko/Documents/elevennew/Eleven/Eleven/web/views/stats/newxhtml.xhtml</file>
+            <file>file:/C:/Users/kaotiko/Documents/elevennew/Eleven/Eleven/web/template.xhtml</file>
+            <file>file:/C:/Users/kaotiko/Documents/elevennew/Eleven/Eleven/src/java/com/eleven/model/Team.java</file>
         </group>
     </open-files>
 </project-private>

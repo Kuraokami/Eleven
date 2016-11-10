@@ -1,0 +1,39 @@
+================================================================================
+1 INFORMACION BASICA ===========================================================
+================================================================================
+
+1.1 IDENTIFICACIÓN
+-ID:C05
+-NOMBRE:Stat.java
+
+1.2 TIPO 
+-COMPONENTE INTERNO
+
+1.3 RESUMEN
+Este componente almacena la informacion referente a las Stats de un Team, almacenando sus victorias, derrotas, empates del Equipo
+
+
+1.4 HISTORIA
+-VERSION: 1.0
+-FECHA: NOVIEMBRE 09 de 2016
+
+1.5 AUTORES
+- Frederik Rodriguez
+- Jose Fernando Herrera 
+
+================================================================================
+2 INTERFACES ===================================================================
+================================================================================
+
+
+2.1 FUNCIONES QUE PROVEE
+Getters y Setters para almacenar los atributos.
+
+
+2.2 DEPENDENCIAS
+
+
+================================================================================
+3 INFORMACIÓN DETALLADA ========================================================
+================================================================================
+...
